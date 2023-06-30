@@ -1,0 +1,87 @@
+.global-properties {
+    font-size: 50px;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(43, 43, 43);
+}
+
+/*No hyperlink highlighting*/
+a {
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: inherit;
+    /* no underline */
+}
+
+/*
+    Card Styles
+*/
+.card {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 15px 15px 15px 15px;
+}
+
+.card .card-title {
+    font-style: normal;
+    text-align: center;
+    font-size: 60%;
+}
+
+.card .card-body {
+    font-size: 50%;
+}
+
+.main-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 5px 150px 0px 150px;
+}
+
+
+
+.image-card-1 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0% 3% 1.5% 3%;
+}
+
+.image-card-1-image {
+    size: 50px 50px 50px 50px;
+    width: 15%;
+}
+
+.image-card-1-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-card-1-body-title {
+    margin: 0px 0px 0px 20px;
+    font-size: 200%;
+    opacity: 0.5;
+}
+
+.image-card-1-body-hr {
+    width: 100%;
+}
+
+.image-card-1-body-subtext {
+    margin: 0px 0px 0px 20px;
+    font-size: 100%;
+}
+
+/*
+  Main title of the page
+*/
+.first-title {
+    font-family:'Lucida Sans';
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+
