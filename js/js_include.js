@@ -1,6 +1,10 @@
 $(document).ready(function() {
     console.log('Guru Sarath github io JS run success')
 
+    // Close all the cards 
+    var siblings = $(".card-title").siblings();
+    siblings.slideToggle();
+
     $(".first-title").click(
         function(eventObj) {
             var siblings = $(eventObj.target).siblings()
@@ -8,10 +12,18 @@ $(document).ready(function() {
         }
     );
 
-    $(".card-title").click(
-        function(eventObj) {
-            var siblings = $(eventObj.target).siblings()
-            siblings.slideToggle();
+    $(".card-title").on(
+        {
+            click: function(eventObj) {
+                var siblings = $(eventObj.target).siblings();
+                siblings.slideToggle();
+            },
+            mouseenter: function(eventObj) {
+                var siblings = $(eventObj.target).css({"color": "red"});
+            },
+            mouseleave: function(eventObj) {
+                var siblings = $(eventObj.target).css({"color": "white"});
+            }
         }
     );
 

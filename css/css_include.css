@@ -1,5 +1,5 @@
 .global-properties {
-    font-size: 50px;
+    font-size: 30px;
     font-family: "Arial";
     color: rgb(255, 255, 255);
 }
@@ -30,6 +30,7 @@ a {
     font-style: normal;
     text-align: center;
     font-size: 60%;
+    font-weight: bold;
 }
 
 .card .card-body {
@@ -62,7 +63,7 @@ a {
 
 .image-card-1-body-title {
     margin: 0px 0px 0px 20px;
-    font-size: 200%;
+    font-size: 180%;
     opacity: 0.5;
 }
 
