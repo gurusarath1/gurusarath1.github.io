@@ -7,8 +7,8 @@ $(document).ready(function() {
 
     $(".first-title").click(
         function(eventObj) {
-            var siblings = $(eventObj.target).siblings()
-            siblings.slideToggle();
+            //var siblings = $(eventObj.target).siblings()
+            //siblings.slideToggle();
         }
     );
 
@@ -19,10 +19,10 @@ $(document).ready(function() {
                 siblings.slideToggle();
             },
             mouseenter: function(eventObj) {
-                var siblings = $(eventObj.target).css({"color": "red"});
+                var siblings = $(eventObj.target).css({"text-shadow": "1px 1px 10px #fff"});
             },
             mouseleave: function(eventObj) {
-                var siblings = $(eventObj.target).css({"color": "white"});
+                var siblings = $(eventObj.target).css({"text-shadow": "0px 0px 0px #fff"});
             }
         }
     );
