@@ -2,13 +2,12 @@
     font-size: 30px;
     font-family: "Arial";
     color: rgb(255, 255, 255);
-    position: absolute;
-        top: 1%;
-        bottom: 0;
-        left: 25%;
-        right: 25%;
-    
-        margin: auto;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 800px;
+    position: relative;
+    margin: 0 auto;
 }
 
 body {
