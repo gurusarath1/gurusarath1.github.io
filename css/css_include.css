@@ -91,6 +91,12 @@ a {
     font-size: 100%;
 }
 
+.image-card-1-body-desctext {
+    margin: 0px 0px 0px 20px;
+	font-style: italic;
+    font-size: 10%;
+}
+
 
 /*
   Nav Bar ---------------------------------------
