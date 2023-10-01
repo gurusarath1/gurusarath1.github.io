@@ -40,6 +40,10 @@ $(document).ready(function() {
     $("#papers-reimp").load("card_papers.html", hide_all_cards);
     $("#blog-posts-list").load("card_blog.html", hide_all_cards);
     $("#about-page").load("card_about.html", hide_about_cards);
+	
+	$.get('pages/test_read.txt', function(data) {
+		console.log(data)
+	});
 
     // Delegated event
     $(document).on("click", ".card-title",  function(eventObj) {
