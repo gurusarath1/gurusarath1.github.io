@@ -105,6 +105,8 @@ a {
 
 /* Add a black background color to the top navigation */
 .topnav {
+    position: fixed;
+    top: 0px;
     display: flex;
     align-items: center;
     background-color: #484848;
