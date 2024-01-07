@@ -34,13 +34,15 @@ a {
 }
 
 .card .card-title {
-    font-style: normal;
+    font-style: bold;
+    font-family: monospace;
     text-align: center;
     font-size: 60%;
 }
 
 .card-title:hover {
     text-shadow: 1px 1px 10px #fff;
+    font-size: 70%;
     cursor: pointer;
 }
 .card .card-body {
@@ -75,7 +77,10 @@ a {
 .image-card-1-body-title {
     margin: 0px 0px 0px 20px;
 	font-style: bold;
-    font-size: 120%;
+    text-decoration-line: underline;
+    font-family:monospace;
+    font-size: x-large;
+    color: darkcyan;
     opacity: 1;
 }
 
@@ -84,18 +89,22 @@ a {
 }
 
 .image-card-1-body-hr {
-    width: 100%;
+    width: 50px;
+    visibility: hidden;
 }
 
 .image-card-1-body-subtext {
     margin: 0px 0px 0px 20px;
     font-size: 100%;
+    font-family: monospace;
 }
 
 .image-card-1-body-desctext {
     margin: 0px 0px 0px 20px;
 	font-style: italic;
+    font-family: monospace;
     font-size: 100%;
+    color: rgb(171, 171, 171);
 }
 
 
