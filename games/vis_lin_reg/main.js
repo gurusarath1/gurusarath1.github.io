@@ -32,6 +32,8 @@ fill_data_from_dom_inputs = function() {
 	let data_x_str = document.getElementsByName('data_x')[0].value.split(',')
 	let data_y_str = document.getElementsByName('data_y')[0].value.split(',')
   
+  data_x = []
+  data_y = []
   for(let i=0; i<data_x_str.length; i++)
   {
   	data_x.push(Number(data_x_str[i]))
