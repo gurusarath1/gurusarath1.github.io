@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     $('#navbar').load("navbar.html", hide_all_cards);
     $("#projects-ai-ml-dl").load("card_projects.html", hide_all_cards);
-    $("#papers-reimp").load("card_papers.html", hide_all_cards);
+    //$("#papers-reimp").load("card_papers.html", hide_all_cards);
     $("#blog-posts-list").load("card_blog.html", hide_all_cards);
     $("#about-page").load("card_about.html", hide_about_cards);
 	
