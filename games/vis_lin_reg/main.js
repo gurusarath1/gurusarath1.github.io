@@ -11,12 +11,13 @@ let epoch = 0
 
 
 let data_trace = {
-		x: data_x,
-		y: data_y,
-    mode: 'markers',
-    type: 'scatter',
-    name: 'data'
+  x: data_x,
+  y: data_y,
+  mode: 'markers',
+  type: 'scatter',
+  name: 'data'
 }
+
 
   
 fill_data_from_dom_inputs = function() {
@@ -32,8 +33,8 @@ fill_data_from_dom_inputs = function() {
 	let data_x_str = document.getElementsByName('data_x')[0].value.split(',')
 	let data_y_str = document.getElementsByName('data_y')[0].value.split(',')
   
-  data_x = []
-  data_y = []
+  data_x.splice(0, data_x.length) // Clear the array without creating a new one
+  data_y.splice(0, data_y.length)
   for(let i=0; i<data_x_str.length; i++)
   {
   	data_x.push(Number(data_x_str[i]))
@@ -78,14 +79,13 @@ run_linear_regression = function() {
     y: y_pred,
     name: 'prediction line'
   }
-
  
   let plot_traces = [data_trace, pred_trace]
   let plot_layout = { title: {text:'Linear Regression'} ,
-                      xaxis: {autorange: false, range: [Math.min(...data_x), Math.max(...data_x)]},
-                      yaxis: {autorange: false, range: [Math.min(...data_y), Math.max(...data_y)]} }
+                      xaxis: {autorange: false, range: [Math.min(...data_x) - 1, Math.max(...data_x) + 1]},
+                      yaxis: {autorange: false, range: [Math.min(...data_y) - 1, Math.max(...data_y) + 1]} }
 
-  console.log(plot_layout)
+  //console.log(plot_layout)
   let m_c_trace = [ {x: m_optim, y: c_optim,} ]
   let m_c_layout = { title: {text:'line m-c plot'} , xaxis: {range: [-5, 5]}, yaxis: {range: [-5, 5]} }
 
