@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+
+    <title>Visualize 2D Matrix</title>
+    <meta name="description" content="DESCRIPTION">
+    <script defer src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js" charset="utf-8"></script>
+    <script defer src="main.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <h1>Visualize 2D Matrix</h1>
+
+    <input type="text" name="a00" size="10" value='1'> <input type="text" name="a01" size="10" value='0'> <br>
+    <input type="text" name="a10" size="10" value='0'> <input type="text" name="a11" size="10" value='1'> <br>
+    <button id="run-button">Apply Transform</button><br>
+    <label>Inp Points:</label><input type="text" name="in_ps" size="100" value='' disabled> <br>
+    <label>Out Points:</label><input type="text" name="out_ps" size="100" value='' disabled> <br>
+    <label>Eigen value 1: </label><input type="text" name="lambda1" size="20" value='1' disabled > <br>
+    <label>Eigen value 2: </label><input type="text" name="lambda2" size="20" value='1'disabled > <br>
+
+    <div class="progress-bar"></div>
+    <div id="transformation-graph"></div>
+
+</body>
+
+</html>
