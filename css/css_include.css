@@ -23,6 +23,53 @@ a {
     /* no underline */
 }
 
+
+/*
+    Square Banner ---------------------------------------
+*/
+
+.square-banner {
+    transition: 0.3s;
+    padding: 15px 15px 15px 15px;
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+.square-banner .square-banner-title {
+    font-style: bold;
+    font-family: monospace;
+    text-align: center;
+    font-size: 70%;
+}
+
+/*
+    Square Banner HW asserts ---------------------------------------
+*/
+
+.square-banner .square-banner-hw-assets {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+
+.hw-asset-img-and-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hw-asset-img {
+    height: 100px;
+    margin: 15px;
+    max-width: auto;
+}
+
+.hw-asset-text {
+    text-align: center;
+    font-size: 15px;
+}
+
+
 /*
     Card Styles ---------------------------------------
 */

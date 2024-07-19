@@ -36,6 +36,7 @@ $(document).ready(function() {
     console.log('Guru Sarath github io JS run started');
 
     $('#navbar').load("navbar.html", hide_all_cards);
+    $('#hw-assets').load("square_banner_hw_assets.html");
     $("#projects-ai-ml-dl").load("card_projects.html", hide_all_cards);
     //$("#papers-reimp").load("card_papers.html", hide_all_cards);
     $("#blog-posts-list").load("card_blog.html", hide_all_cards);
