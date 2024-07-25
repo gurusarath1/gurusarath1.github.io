@@ -12,6 +12,7 @@ let unselected_element_class_name = "num-block"
 let select_low_index_class_name = "num-low-index"
 let select_high_index_class_name = "num-high-index"
 let select_mid_index_class_name = "num-mid-index"
+let select_mid_low_index_class_name = "num-mid-equal-low-index"
 let animation_delay = 1000
 
 
@@ -34,42 +35,45 @@ let get_search_element_from_text = function() {
 
 let animation_loop = function() {
 
-  iter += 1
-
-  document.getElementById("animation-area").innerHTML += "<hr>" + "Iteration = " + String(iter)
-
-  mid = Math.floor(low + ((high - low) / 2))
-  document.getElementById("animation-area").innerHTML += "<br> Low = " + String(low)
-  document.getElementById("animation-area").innerHTML += "<br> Mid = " + String(mid)
-  document.getElementById("animation-area").innerHTML += "<br> High = " + String(high)
-  document.getElementById("animation-area").innerHTML += "<br>"
-
-  for(let i=0; i<nums.length; i++) {
-    let num_str = String(nums[i])
-
-    let element_html_block = ""
-    let class_list_html_text = ""
-    if(i == mid) {
-      class_list_html_text += 'class="' + select_mid_index_class_name + '" '
-    }
-    
-    if(i == high) {
-      class_list_html_text += 'class="' + select_high_index_class_name + '" '
-    } else if(i == low) {
-      class_list_html_text += 'class="' + select_low_index_class_name + '" '
-    } else {
-      class_list_html_text += 'class="' + unselected_element_class_name + '" '
-    }
-    
-    element_html_block = '<div ' + class_list_html_text + '>'+ num_str +'</div>'
-    document.getElementById("animation-area").innerHTML += element_html_block;
-  }
-
-
   if(low <= high) {
+
+    iter += 1
+
+    document.getElementById("animation-area").innerHTML += '<br><br><div class="iter">Iteration = ' + String(iter) + '</div>'
+
+    mid = Math.floor(low + ((high - low) / 2))
+    document.getElementById("animation-area").innerHTML += "<br> Low = " + String(low)
+    document.getElementById("animation-area").innerHTML += "<br> Mid = " + String(mid)
+    document.getElementById("animation-area").innerHTML += "<br> High = " + String(high)
+    document.getElementById("animation-area").innerHTML += "<br>"
+
+    for(let i=0; i<nums.length; i++) {
+      let num_str = String(nums[i])
+
+      let element_html_block = ""
+      let class_list_html_text = ""
+      
+      if(mid == low && i == mid) {
+        class_list_html_text += 'class="' + select_mid_low_index_class_name + '" '
+      } else if(i == mid) {
+        class_list_html_text += 'class="' + select_mid_index_class_name + '" '
+      } else if(i == high) {
+        class_list_html_text += 'class="' + select_high_index_class_name + '" '
+      } else if(i == low) {
+        class_list_html_text += 'class="' + select_low_index_class_name + '" '
+      } else {
+        class_list_html_text += 'class="' + unselected_element_class_name + '" '
+      }
+      
+      element_html_block = '<div ' + class_list_html_text + '>'+ num_str +'</div>'
+      document.getElementById("animation-area").innerHTML += element_html_block;
+    }
+
+
+
     if(nums[mid] == search_element) {
       console.log("Element found at index == " + String(mid))
-      document.getElementById("animation-area").innerHTML += "<br> Element found at index " + String(mid)
+      document.getElementById("animation-area").innerHTML += '<br> <div class="found">Element found at index ' + String(mid) + '</div>'
       return;
     }
 
@@ -79,10 +83,11 @@ let animation_loop = function() {
       low = mid + 1
     }
 
-    setTimeout(animation_loop, animation_delay)
+      setTimeout(animation_loop, animation_delay)
   } else {
     console.log("Not Found !!!")
-    document.getElementById("animation-area").innerHTML += "<br> Element Not Found !!"
+    document.getElementById("animation-area").innerHTML += '<br> <div class="not-found">Element Not Found !!<br>\
+    Insertion Index (Low index after update from last inter) = ' + String(low) + '</div>'
   }
 
 }
