@@ -78,7 +78,7 @@ let animation_loop = function() {
     }
 
     // Left side is sorted
-    if( nums[mid] > nums[low] ) {
+    if( nums[mid] >= nums[low] ) {
 
       document.getElementById("animation-area").innerHTML += ' Left side is sorted (nums[mid] > nums[low])'
 
