@@ -109,8 +109,7 @@ let animation_loop = function() {
     setTimeout(animation_loop, animation_delay)
   } else {
     console.log("Not Found !!!")
-    document.getElementById("animation-area").innerHTML += '<br> <div class="not-found">Element Not Found !!<br>\
-    Insertion Index (Low index after update from last inter) = ' + String(low) + '</div><br>Low, High index after loop exit = ' + String(low) + ',  ' + String(high)
+    document.getElementById("animation-area").innerHTML += '<br> <div class="not-found">Element Not Found !!<br></div><br>Low, High index after loop exit = ' + String(low) + ',  ' + String(high)
   }
 
 }
